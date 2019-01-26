@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import Todo from './Todo';
-import CounterTodo from './CounterTodo';
+import Todo from './container/HookTodo';
+import CounterTodo from './container/CounterTodo';
+import ReducerTodo from './container/ReduserTodo/ReducerTodo';
 
 class App extends Component {
   render() {
@@ -10,6 +11,9 @@ class App extends Component {
         <div className='hook'>
           <Todo />
           <CounterTodo />
+          <hr />
+          <ReducerTodo />
+          <hr />
         </div>
       </div>
     );

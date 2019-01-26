@@ -5,7 +5,7 @@ const TodoView = ({
   handleInput,
   handleAddItem,
   handleToggleDone,
-  handleDeletItem,
+  handleDeleteItem,
   inputValue,
   todoList,
   counter,
@@ -30,7 +30,7 @@ const TodoView = ({
             <span
               onClick={ev => {
                 ev.stopPropagation();
-                handleDeletItem(id);
+                handleDeleteItem(id);
               }}
             >
               [X]

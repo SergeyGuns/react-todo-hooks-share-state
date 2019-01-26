@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useStore } from '../hook-observer';
-import TodoView from '../component/TodoView.js';
-const Todo = () => {
+import { useStore } from '../../hook-observer';
+import TodoView from '../../component/TodoView.js';
+const HookTodo = () => {
   const [list, setList] = useState([]);
   const [input, setInput] = useState('');
   const [counter, setCounter] = useStore();
@@ -30,7 +30,7 @@ const Todo = () => {
   return (
     <TodoView
       handleAddItem={handleAddItem}
-      handleDeletItem={handleDeleteItem}
+      handleDeleteItem={handleDeleteItem}
       handleToggleDone={handleToggleDone}
       handleInput={handleInput}
       inputValue={input}
@@ -40,4 +40,4 @@ const Todo = () => {
   );
 };
 
-export default Todo;
+export default HookTodo;
