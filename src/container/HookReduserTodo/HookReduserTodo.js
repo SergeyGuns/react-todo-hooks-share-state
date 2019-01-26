@@ -2,7 +2,7 @@ import React, { useReducer } from 'react';
 import TodoView from '../../component/TodoView.js';
 import reducer, { initialState } from '../../hook-reducer';
 
-const ReducerTodo = () => {
+const HookReduserTodo = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   const handleAddItem = () =>
@@ -42,4 +42,4 @@ const ReducerTodo = () => {
   );
 };
 
-export default ReducerTodo;
+export default HookReduserTodo;
