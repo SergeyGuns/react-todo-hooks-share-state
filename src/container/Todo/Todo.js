@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { useStore } from '../hook-store';
+import { useStore } from '../hook-observer';
+import TodoView from '../component/TodoView.js';
 const Todo = () => {
   const [list, setList] = useState([]);
   const [input, setInput] = useState('');
@@ -21,27 +22,21 @@ const Todo = () => {
       })),
     );
 
+  const handleDeleteItem = targetID =>
+    setList(list.filter(item => item.id !== targetID));
+
+  const handleInput = ev => setInput(ev.target.value);
+
   return (
-    <div>
-      {counter}
-      <input
-        onInput={ev => setInput(ev.target.value)}
-        value={input}
-        type='text'
-      />
-      <div className='todo__list'>
-        {list.map(({ text, done, id }) => (
-          <div
-            style={{ opacity: done ? '.2' : '1' }}
-            onClick={() => handleToggleDone(id)}
-            className='todo__item'
-          >
-            {text}
-          </div>
-        ))}
-      </div>
-      <button onClick={handleAddItem}>add</button>
-    </div>
+    <TodoView
+      handleAddItem={handleAddItem}
+      handleDeletItem={handleDeleteItem}
+      handleToggleDone={handleToggleDone}
+      handleInput={handleInput}
+      inputValue={input}
+      todoList={list}
+      counter={counter}
+    />
   );
 };
 

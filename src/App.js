@@ -7,8 +7,10 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <Todo />
-        <CounterTodo />
+        <div className='hook'>
+          <Todo />
+          <CounterTodo />
+        </div>
       </div>
     );
   }
