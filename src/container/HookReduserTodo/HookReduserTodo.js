@@ -4,7 +4,6 @@ import reducer, { initialState } from '../../hook-reducer';
 
 const HookReduserTodo = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-
   const handleAddItem = () =>
     dispatch({
       type: 'add_item',

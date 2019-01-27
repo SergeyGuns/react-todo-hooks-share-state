@@ -1,9 +1,9 @@
 import React from 'react';
 import { useStore } from '../../hook-observer';
-import Counter from '../../component/Counter';
+import CounterView from '../../component/CounterView';
 
 const HookStateCounterTodo = () => {
   let [count] = useStore();
-  return <Counter count={count} />;
+  return <CounterView count={count} />;
 };
 export default HookStateCounterTodo;
