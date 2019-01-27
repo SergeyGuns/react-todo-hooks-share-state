@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useStore } from '../../hook-observer';
-import TodoView from '../../component/TodoView.js';
+import TodoView from '../../component/TodoView';
 const HookTodo = () => {
   const [list, setList] = useState([]);
   const [input, setInput] = useState('');

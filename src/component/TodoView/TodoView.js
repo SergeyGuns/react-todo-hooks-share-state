@@ -47,7 +47,7 @@ TodoView.propTypes = {
   handleInput: PropTypes.func.isRequired,
   handleAddItem: PropTypes.func.isRequired,
   handleToggleDone: PropTypes.func.isRequired,
-  handleDeletItem: PropTypes.func.isRequired,
+  handleDeleteItem: PropTypes.func.isRequired,
   inputValue: PropTypes.string.isRequired,
   todoList: PropTypes.array.isRequired,
   counter: PropTypes.number,

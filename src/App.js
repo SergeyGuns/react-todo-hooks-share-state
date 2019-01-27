@@ -3,7 +3,7 @@ import './App.css';
 import HookStateTodo from './container/HookStateTodo';
 import HookStateCounterTodo from './container/HookStateCounterTodo';
 import HookReduserTodo from './container/HookReduserTodo';
-import HookReduserCounter from './container/HookReduserCounter';
+import HookStateTetris from './container/HookStateTetris';
 
 class App extends Component {
   render() {
@@ -15,8 +15,9 @@ class App extends Component {
           <HookStateCounterTodo />
           <hr />
           Hook reduser state
-          <HookReduserCounter />
           <HookReduserTodo />
+          <hr />
+          <HookStateTetris />
           <hr />
         </div>
       </div>

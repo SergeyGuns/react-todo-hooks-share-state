@@ -1,5 +1,5 @@
 import React, { useReducer } from 'react';
-import TodoView from '../../component/TodoView.js';
+import TodoView from '../../component/TodoView';
 import reducer, { initialState } from '../../hook-reducer';
 
 const HookReduserTodo = () => {
